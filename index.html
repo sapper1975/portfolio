@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Profile of Kyle Lui, an engineering student at Lehigh University interested in defence and space manufacturing, international relations, and motorsport.">
   <title>Kyle Lui — Engineering Student</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -90,11 +87,6 @@
           <h3>R1 / Tripoli Level 1</h3>
           <p class="engineering-summary">As a member of the Lehigh University Rocketry Association, I’m developing practical experience in model-rocketry design, fabrication, testing, and flight operations while working toward my Tripoli Level 1 certification.</p>
         </div>
-        <dl class="engineering-facts">
-          <div><dt>Organisation</dt><dd>LURA</dd></div>
-          <div><dt>Certification</dt><dd>Tripoli Level 1 / In progress</dd></div>
-          <div><dt>Vehicle</dt><dd>Kyle Lui R1</dd></div>
-        </dl>
       </div>
       <div class="rocket-sheet reveal" aria-label="Technical wireframe of the Kyle Lui R1 rocket with flight performance readouts">
         <div class="rocket-sheet-head mono"><span>KYLE LUI R1</span><span>FLIGHT PERFORMANCE / SIMULATION</span></div>
@@ -104,11 +96,14 @@
           <span class="rocket-dimension dimension-diameter">Ø 4 in</span>
           <span class="rocket-axis"></span>
         </div>
-        <div class="rocket-readouts">
-          <div class="readout-group"><div><span class="readout-label">Stability</span><strong>1.64 cal</strong><em>/ 13.9 %</em></div><div><span class="legend-dot cg-dot"></span><span>CG: 27.207 in</span></div><div><span class="legend-dot cp-dot"></span><span>CP: 33.754 in</span></div><small>at M=0.300</small></div>
-          <div class="readout-performance"><div><span>Flight configuration</span><strong>[H100W_DMS-9]</strong></div><div><span>Apogee</span><strong>1579 ft</strong></div><div><span>Max. velocity</span><strong>354 ft/s (Mach 0.318)</strong></div><div><span>Max. acceleration</span><strong>235 ft/s²</strong></div></div>
-          <div class="rocket-mass mono"><span>Mass / no motors</span><strong>46.8 oz</strong><span>Mass / with motors</span><strong>56 oz</strong></div>
-        </div>
+        <table class="rocket-table">
+          <caption>Flight performance / H100W_DMS-9</caption>
+          <tbody>
+            <tr><th scope="row">Dimensions</th><td>47 in length / 4 in max. diameter</td><th scope="row">Apogee</th><td>1579 ft</td><th scope="row">Max. velocity</th><td>354 ft/s / Mach 0.318</td></tr>
+            <tr><th scope="row">Stability</th><td>1.64 cal / 13.9%</td><th scope="row">CG / CP</th><td>27.207 / 33.754 in</td><th scope="row">Max. acceleration</th><td>235 ft/s²</td></tr>
+            <tr><th scope="row">Mass</th><td>46.8 oz dry / 56 oz with motors</td><th scope="row">Simulation</th><td colspan="3">Mach 0.300 reference condition</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
