@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography preview</title>
+  <style>
+    html, body, iframe { width: 100%; height: 100%; margin: 0; border: 0; }
+  </style>
+</head>
+<body>
+  <iframe src="index.html" title="Portfolio typography preview"></iframe>
+  <script>
+    const previewStyles = `
+      body { font-stretch: normal; }
+      .section-label, .mono { font-stretch: normal; }
+      h1, h2 { line-height: .96; letter-spacing: 0; font-kerning: normal; }
+      .visual-title { line-height: 1; letter-spacing: 0; font-kerning: normal; }
+      .about-lede { line-height: 1.1; letter-spacing: 0; font-kerning: normal; }
+    `;
+
+    document.querySelector('iframe').addEventListener('load', (event) => {
+      const style = event.target.contentDocument.createElement('style');
+      style.textContent = previewStyles;
+      event.target.contentDocument.head.append(style);
+    });
+  </script>
+</body>
+</html>
