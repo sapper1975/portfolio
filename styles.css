@@ -21,9 +21,7 @@ a { color: inherit; }
 .text-link, .contact-link { text-decoration: none; }
 .text-link:hover, .contact-link:hover { color: var(--orange); }
 .university-lockup { display: inline-flex; align-items: center; gap: .7rem; color: var(--muted); }
-.university-crest { display: grid; place-items: center; width: 34px; height: 40px; padding-top: .15rem; background: var(--ink); color: var(--paper); clip-path: polygon(50% 100%, 4% 72%, 4% 0, 96% 0, 96% 72%); font: 500 .62rem var(--mono); line-height: 1; }
-.university-crest span, .university-crest small { grid-area: 1 / 1; }
-.university-crest small { align-self: end; margin-bottom: .45rem; font-size: .32rem; font-weight: 300; }
+.university-crest { display: block; width: 42px; height: 42px; object-fit: contain; }
 .university-name { font: .65rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
 .hero { min-height: min(800px, calc(100vh - 72px)); padding: 8vw 4vw 2rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .72fr); grid-template-rows: auto 1fr auto; column-gap: 7vw; position: relative; overflow: hidden; }
 .section-label, .mono { font-family: var(--mono); font-size: .65rem; font-stretch: normal; font-weight: 300; text-transform: uppercase; letter-spacing: .04em; }
