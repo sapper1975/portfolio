@@ -46,12 +46,21 @@ a { color: inherit; }
 .section-label, .mono { font-family: var(--mono); font-size: .65rem; font-stretch: normal; font-weight: 300; text-transform: uppercase; letter-spacing: .04em; }
 .hero-label { grid-column: 1 / -1; margin-bottom: 4vw; color: var(--muted); }
 .hero-copy { align-self: center; max-width: 690px; z-index: 1; }
-.eyebrow { margin: 0 0 1.5rem; color: var(--red); font: .7rem var(--mono); text-transform: uppercase; }
+.eyebrow { margin: 0 0 1.5rem; color: var(--ink); font: .7rem var(--mono); text-transform: none; }
 h1, h2, h3, p { margin-top: 0; }
 h3 { font-weight: 500; }
 h1, h2 { margin-bottom: 2rem; font-size: clamp(3.5rem, 7.6vw, 8.4rem); line-height: .88; letter-spacing: 0; font-weight: 500; }
 h1 em, h2 em { color: var(--red); font-style: normal; }
 .hero-intro { max-width: 390px; margin-bottom: 2rem; font-size: 1.05rem; }
+.title-specimen { width: min(100%, 740px); margin-bottom: 2rem; }
+.specimen-box { position: relative; border: 1px solid var(--ink); background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(25% - 1px), rgba(31, 44, 54, .58) 25%, transparent calc(25% + 1px)); }
+.specimen-word { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); min-height: clamp(150px, 19vw, 245px); margin: 0; padding: .02em 0 0; color: transparent; font-family: var(--sans); font-size: clamp(5rem, 12vw, 11rem); font-weight: 500; line-height: .9; letter-spacing: 0; -webkit-text-stroke: 2px var(--ink); text-align: center; }
+.specimen-word span { position: relative; display: grid; place-items: center; border-right: 1px solid var(--ink); }
+.specimen-word span:last-child { border-right: 0; }
+.specimen-word .letter-space { border-right: 1px solid var(--ink); }
+.height-tick { position: absolute; left: -1px; width: 8px; height: 1px; background: var(--ink); z-index: 1; }
+.tick-top { top: 0; }.tick-upper { top: 25%; }.tick-lower { top: 75%; }.tick-bottom { bottom: 0; }
+.specimen-box::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(circle, var(--ink) 1px, transparent 1.2px), radial-gradient(circle, var(--ink) 1px, transparent 1.2px); background-size: 5px 1px, 5px 1px; background-position: left 25%, left 75%; background-repeat: repeat-x; opacity: .55; }
 .text-link { display: inline-flex; align-items: center; gap: 1.4rem; border-bottom: 1px solid var(--ink); padding-bottom: .4rem; font-weight: 300; font-size: .86rem; }
 .text-link span { color: var(--red); font-size: 1.2rem; }
 .hero-diagram { width: min(39vw, 520px); aspect-ratio: 1; position: relative; align-self: center; justify-self: end; }
